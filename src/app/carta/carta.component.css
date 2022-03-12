@@ -1,0 +1,27 @@
+*{
+ margin: 0;  
+}
+.card-body{
+    text-align: center;
+}
+.card-img-overlay{
+    background-color: white;
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    top: 0;
+    opacity: 0.7;
+    transition: .8s;
+}
+.btn{
+    width:50%;
+    background-color: #11b0c8;
+    color: white;
+}
+
+.btn:hover{
+    width:60%;
+    background-color: #1cc329;
+    transition: .3s;
+}

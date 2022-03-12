@@ -1,0 +1,15 @@
+#logo{
+    margin-left: 50px;
+}
+
+li{ 
+    text-align: center;
+    margin-left: 50px;
+    font-family: chiller;
+    font-size: 40px;
+}
+
+li:hover{
+    background-color: #11b0c8;
+    transition: .7s;
+}
