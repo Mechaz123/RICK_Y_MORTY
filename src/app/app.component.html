@@ -1,5 +1,5 @@
 <app-header></app-header>
 <h1 class="text-center">Characters</h1>
-<app-carta [nombre]="nombre"></app-carta>
-<app-carta [nombre]="nombre"></app-carta>
-<app-carta [nombre]="nombre"></app-carta>
+<div id="cartas" *ngFor="let character of characters">
+    <app-carta image={{character.image}} name={{character.name}}></app-carta>
+</div>
