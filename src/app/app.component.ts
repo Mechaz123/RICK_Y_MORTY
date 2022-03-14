@@ -1,33 +1,44 @@
 import { Component, OnInit } from '@angular/core';
-import { Character } from './character';
-
+import axios from 'axios';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-
-  characters: Character[] | undefined;
+  characters: any;
   title = 'Rick_and_Morty';
-
-  constructor() { }
+  page = 1;
+  constructor() {}
 
   ngOnInit(): void {
-    this.characters = [{
-      "id": 1,
-      "name": "Rick Sanchez",
-      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-    },
-    {
-      "id": 2,
-      "name": "Morty Smith",
-      "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
-    },
-    {
-      "id": 3,
-      "name": "Summer Smith",
-      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
-    }];
+    this.peticion();
   }
+  // Make a request for a user with a given ID
+  peticion = () => {
+    axios
+      .get(`https://rickandmortyapi.com/api/character/?page=${this.page}`)
+      .then((response) => {
+        // handle success
+        this.characters = response.data.results;
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
+  };
+
+  next = () => {
+    if (this.page < 42){
+      this.page++;
+      this.peticion();
+    }
+  };
+
+  previous = () => {
+    if (this.page > 1) {
+      this.page--;
+      this.peticion();
+    }
+  };
 }

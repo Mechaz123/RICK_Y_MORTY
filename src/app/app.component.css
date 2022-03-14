@@ -1,5 +1,5 @@
-#cartas{
-    display: inline-block;
-    margin-left: 14%;
-    margin-top: 5%;
+.cartas {
+  display: inline-block;
+  margin-left: 14%;
+  margin-top: 5%;
 }
