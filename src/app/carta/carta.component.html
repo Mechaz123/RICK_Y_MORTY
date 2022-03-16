@@ -1,6 +1,8 @@
 <div class="container">
   <div class="card" style="width: 18rem">
-    <img src="{{ image }}" class="card-img-top" alt="..." />
+    <span class="border border-5 border-dark">
+      <img src="{{ image }}" class="card-img-top" alt="..." />
+    </span>
     <div class="card-img-overlay">
       <h5 class="card-title">{{ name }}</h5>
       <p class="card-text">
@@ -8,7 +10,8 @@
         Species: {{ species }} <br />
         Gender: {{ gender }}
       </p>
-      <a href="#" class="btn">Read More</a>
+      <a href="details/{{id}}" class="btn">Read More</a>
     </div>
   </div>
+
 </div>

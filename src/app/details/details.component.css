@@ -1,0 +1,19 @@
+.container{
+    margin-top: 5%;
+}
+
+.card{
+    background-color: #262627;
+    color: white;
+}
+
+.card-title{
+    color: #11b0c8;
+}
+
+b{
+    color: #11b0c8;
+}
+.btn-primary{
+  display: block; 
+}
